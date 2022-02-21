@@ -108,7 +108,7 @@ class Reports(BASECOG):
         Wenn Mitglied Keine ist. Standardmäßig kein Benutzer
         """
         embed = discord.Embed()
-        embed.description = "**Reason**:\n{}".format(reason)
+        embed.description = "**Grund**:\n{}".format(reason)
         embed.timestamp = ctx.message.created_at
 
         if member is None:
