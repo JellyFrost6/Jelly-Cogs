@@ -12,7 +12,7 @@ class Verify(commands.Cog):
     Einrichtung eines Verifizierungsprozesses, bei dem die Mitglieder bestätigen müssen, dass sie die Regeln gelesen haben oder akzeptieren
     """
 
-    __author__ = ["Efedc", "X"]
+    __author__ = ["Jelly", "X"]
     __version__ = "1.0.1"
 
     def __init__(self, bot, *args, **kwargs):
