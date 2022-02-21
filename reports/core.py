@@ -21,7 +21,7 @@ class Reports(BASECOG):
     Mitglieder können `[p]report <Benutzer> <Grund>` eingeben und es wird in deinem ausgewählten Kanal angezeigt!
     """
 
-    __author__ = ["Efedc"]
+    __author__ = ["Jelly"]
     __version__ = "1.1.0"
 
     def __init__(self, bot):
