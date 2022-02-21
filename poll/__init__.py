@@ -1,6 +1,6 @@
 from redbot.core.bot import Red
 
-from .poll import Poll
+from .poll import poll
 
 __red_end_user_data_statement__ = (
     "This cog does not persistently store data or metadata about users."
@@ -8,5 +8,5 @@ __red_end_user_data_statement__ = (
 
 
 def setup(bot: Red):
-    cog = Poll(bot)
+    cog = poll(bot)
     bot.add_cog(cog)
