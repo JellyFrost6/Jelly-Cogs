@@ -17,12 +17,12 @@ class Embeds(commands.Cog):
     @commands.bot_has_permissions(embed_links=True)
 
     async def sendembed(self, ctx, title, text):
-        """Send an embed.
+        """Embed senden.
         
-        The embed will contain a title `title` and body with `text`.
-        All normal discord formatting will work inside the embed.
-        Do not forget to put every argument into `" "`.
-        If you want to attach a picture just add it to the message."""
+        Die Einbettung enthält einen Titel `title` und einen Textkörper mit `text`.
+        Alle normalen Discord-Formatierungen funktionieren innerhalb der Einbettung.
+        Vergiss nicht, jedes Argument in `" "` zu setzen.
+        Wenn du ein Bild anhängen möchtest, füge es einfach der Nachricht hinzu."""
         if ctx.message.attachments:
             embed = discord.Embed(
                 title = title,
