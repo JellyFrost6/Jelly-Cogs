@@ -50,7 +50,7 @@ class GlobalTextChannel(NamedTuple):
 
 class QuoteTools(commands.Cog):
     """
-    Cog zum Zitieren von Nachrichten nach ID
+    Cog for quoting messages by ID
     """
 
     __author__ = "Jelly"
@@ -74,8 +74,8 @@ class QuoteTools(commands.Cog):
     ):
         """
         erhält (eine) Nachricht(en) nach ID(s)
-        Der Benutzer muss in der Lage sein, die Nachricht(en) zu sehen
-        Sie müssen bestimmte Kanäle für die Suche angeben (nur nach ID oder Erwähnung!)
+        Der Nutzer muss die Nachricht(en) sehen können
+        Du musst bestimmte Kanäle für die Suche angeben (nur nach ID oder Erwähnung!)
         """
 
         if not messageids or not channels:
