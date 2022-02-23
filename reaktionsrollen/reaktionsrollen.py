@@ -90,7 +90,7 @@ class Reaktionsrollen(BaseCog):
         del reaktionsrollen[message_indicator][raw_emoji]
         if len(reaktionsrollen[message_indicator]) == 0:
             del reaktionsrollen[message_indicator]
-        await self.settings.guild(ctx.guild).rollenzuweisung.set(reaktionsrollen)
+        await self.settings.guild(ctx.guild). reaktionsrollen.set(reaktionsrollen)
         embed = discord.Embed(colour=discord.Colour.dark_blue())
         embed.description = f'Die Reaktionsrolle wurde erfolgreich entfernt.\n' \
                             f'> Emoji: {emoji}\n' \
@@ -98,7 +98,7 @@ class Reaktionsrollen(BaseCog):
         return await ctx.send(embed=embed)
 
     @reaktionsrollen.command(name='list')
-    async def rollenzuweisung_list(self, ctx: Context):
+    async def  reaktionsrollen_list(self, ctx: Context):
         """List all setup reaction roles."""
         reaktionsrollen = await self.settings.guild(ctx.guild).reaktionsrollen()
         if len(reaktionsrollen) == 0:
