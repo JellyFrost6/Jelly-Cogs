@@ -43,21 +43,21 @@ class GlobalTextChannel(NamedTuple):
                 channel = bot.get_channel(channel_id)
 
         if not channel or not isinstance(channel, discord.TextChannel):
-            raise commands.BadArgument('Channel "{}" not found.'.format(argument))
+            raise commands.BadArgument('Kanal "{}" nicht gefunden.'.format(argument))
 
         return cls(channel)
 
 
 class QuoteTools(commands.Cog):
     """
-    Cog for quoting messages by ID
+    Cog zum Zitieren von Nachrichten nach ID
     """
 
-    __author__ = "mikeshardmind(Sinbad)"
+    __author__ = "Jelly"
     __version__ = "2021.03"
 
     async def red_delete_data_for_user(self, **kwargs):
-        """ Nothing to delete """
+        """ Nichts zu löschen """
         return
 
     def format_help_for_context(self, ctx):
@@ -73,9 +73,9 @@ class QuoteTools(commands.Cog):
         self, ctx, channels: commands.Greedy[GlobalTextChannel] = None, *messageids: int
     ):
         """
-        gets (a) message(s) by ID(s)
-        User must be able to see the message(s)
-        You need to specify specific channels to search (by ID or mention only!)
+        erhält (eine) Nachricht(en) nach ID(s)
+        Der Benutzer muss in der Lage sein, die Nachricht(en) zu sehen
+        Sie müssen bestimmte Kanäle für die Suche angeben (nur nach ID oder Erwähnung!)
         """
 
         if not messageids or not channels:
@@ -85,7 +85,7 @@ class QuoteTools(commands.Cog):
 
         msgs = await find_messages(ctx, messageids, chans)
         if not msgs:
-            return await ctx.maybe_send_embed("No matching message found.")
+            return await ctx.maybe_send_embed("Keine passende Nachricht gefunden.")
 
         for m in msgs:
             if await ctx.embed_requested():
