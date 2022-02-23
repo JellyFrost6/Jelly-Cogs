@@ -27,7 +27,7 @@ class Reaktionsrollen(BaseCog):
         except ValueError:
             return emoji
 
-    @commands.group(name='rz')
+    @commands.group(name='rr')
     @checks.admin_or_permissions(manage_guild=True)
     async def reaktionsrollen(self, ctx: Context):
         """Verwaltung der Reaktionsrollen"""
