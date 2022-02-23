@@ -1,0 +1,18 @@
+{
+    "author": [
+        "Jelly"
+    ],
+    "description": "Lege eine benutzerdefinierte Nachricht fest, die bei einer Bot-Erwähnung gesendet wird.",
+    "disabled" : false,
+    "end_user_data_statement" : "This cog stores provided server and global settings.",
+    "hidden": false,
+    "install_msg": "Danke für die Installation! Benutze `[p]help mentionhelp` für weitere Informationen.",
+    "min_bot_version" : "3.4.0",
+    "min_python_version" : [3, 8, 1],
+    "permissions" : ["embed_links"],
+    "required_cogs" : {},
+    "requirements" : [],
+    "short": "Customizable MentionHelp Message",
+    "tags" : ["utility", "mentionhelp", "custom", "message"],
+    "type": "COG"
+}
