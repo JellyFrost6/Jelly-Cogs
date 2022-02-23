@@ -15,7 +15,7 @@ class Reaktionsrollen(BaseCog):
         self.bot = bot
         self.settings = Config.get_conf(self, 93843927132)
         default_guild_settings = {
-            "reaction_roles": {}
+            "reaktionsrollen": {}
         }
         self.settings.register_guild(**default_guild_settings)
 
@@ -77,7 +77,7 @@ class Reaktionsrollen(BaseCog):
         message_indicator = f'{message.channel.id}:{message.id}'
         raw_emoji = str(emoji.id if isinstance(emoji, discord.Emoji) else emoji)
 
-        if message_indicator not in reaktionsrollen or raw_emoji not in reaction_roles[message_indicator]:
+        if message_indicator not in reaktionsrollen or raw_emoji not in reaktionsrollen[message_indicator]:
             embed = discord.Embed(colour=discord.Colour.dark_red())
             embed.description = f'Für dieses Emoji ist keine Reaktionsrolle registriert.\n' \
                                 f'> Emoji: {emoji}\n' \
