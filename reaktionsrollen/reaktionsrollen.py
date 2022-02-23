@@ -38,11 +38,11 @@ class Reaktionsrollen(BaseCog):
                                   role: discord.Role):
         """Füge eine Reaktionsrolle hinzu."""
         # TODO: Check permissions if the bot is able to grant the role
-        rollenzuweisung = await self.settings.guild(ctx.guild).reaktionsrollen()
+        reaktionsrollen = await self.settings.guild(ctx.guild).reaktionsrollen()
         message_indicator = f'{message.channel.id}:{message.id}'
         raw_emoji = str(emoji.id if isinstance(emoji, discord.Emoji) else emoji)
 
-        if message_indicator in rollenzuweisung:
+        if message_indicator in reaktionsrollen:
             if raw_emoji in reaktionsrollen[message_indicator]:
                 embed = discord.Embed(colour=discord.Colour.dark_red())
                 embed.description = f'Es ist bereits eine Reaktionsrolle mit diesem Emoji registriert.\n' \
